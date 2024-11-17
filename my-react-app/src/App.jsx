@@ -5,11 +5,13 @@ import English from "./Pages/English";
 import French from "./Pages/French";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
+import { useState } from "react";
 
 function App() {
+  let [count, setCount] = useState(null);
   return (
     <>
-      <Navbar />
+      <Navbar setCount={setCount} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/espana" element={<Espanyol />} />
